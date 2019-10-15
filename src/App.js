@@ -1,8 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { CardList } from './components/card-list/card-list.component';
+import { SearchBox } from './components/search-box/search-box.component';
 import './App.css';
 
-function App() {
+export default class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      heros: [],
+      searchField: '',
+      monsters: [
+        {
+          name: 'Frankenstein',
+          id: 'asc1'
+        },
+        {
+          name: 'Dracula',
+          id: 'asc2'
+        },
+        {
+          name: 'Zambala',
+          id: 'asc3'
+        }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(users => this.setState({ heros: users }));
+  }
+
+  handleChange = e => {
+    this.setState({ searchField: e.target.value });
+  };
+
+  render() {
+    const { heros, searchField } = this.state;
+    const filtreHeros = heros.filter(hero =>
+      hero.name.toLowerCase().includes(searchField.toLocaleLowerCase())
+    );
+    return (
+      <div className='App'>
+        <h1>Heros Rolodex</h1>
+        < SearchBox
+          placeholder='search heros'
+          handleChange={this.handleChange}
+        />
+        <CardList heros={filtreHeros} />
+      </div>
+    );
+  }
+}
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,4 +75,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
