@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/heros-rolodex/static/css/main.49d2a6d9.chunk.css",
+    "main.js": "/heros-rolodex/static/js/main.09708309.chunk.js",
+    "main.js.map": "/heros-rolodex/static/js/main.09708309.chunk.js.map",
+    "runtime-main.js": "/heros-rolodex/static/js/runtime-main.ff75bf03.js",
+    "runtime-main.js.map": "/heros-rolodex/static/js/runtime-main.ff75bf03.js.map",
+    "static/js/2.5075ebff.chunk.js": "/heros-rolodex/static/js/2.5075ebff.chunk.js",
+    "static/js/2.5075ebff.chunk.js.map": "/heros-rolodex/static/js/2.5075ebff.chunk.js.map",
+    "index.html": "/heros-rolodex/index.html",
+    "precache-manifest.7012f37e0a8e7fa629861a4a2e91cdf4.js": "/heros-rolodex/precache-manifest.7012f37e0a8e7fa629861a4a2e91cdf4.js",
+    "service-worker.js": "/heros-rolodex/service-worker.js",
+    "static/css/main.49d2a6d9.chunk.css.map": "/heros-rolodex/static/css/main.49d2a6d9.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff75bf03.js",
+    "static/js/2.5075ebff.chunk.js",
+    "static/css/main.49d2a6d9.chunk.css",
+    "static/js/main.09708309.chunk.js"
+  ]
+}
